@@ -7,9 +7,9 @@ import Screen from '../layout/Screen';
   // Handlers -----------------------------
   // View ---------------------------------
   return (
-    <Screen>
+    <View>
       <Text>List</Text>
-    </Screen>
+    </View>
   );
 }
 
