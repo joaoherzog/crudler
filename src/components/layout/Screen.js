@@ -12,7 +12,7 @@ import { StyleSheet, View } from 'react-native';
       <StatusBar style='light' />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   screen: {

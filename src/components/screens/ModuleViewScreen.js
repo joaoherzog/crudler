@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, } from 'react-native';
 import Screen from '../layout/Screen';
 
  const ModuleViewScreen = () => {
@@ -7,13 +7,12 @@ import Screen from '../layout/Screen';
   // Handlers -----------------------------
   // View ---------------------------------
   return (
-    <View>
-      <Text>List</Text>
-    </View>
+    <Screen>
+      <Text>View</Text>
+    </Screen>
   );
-}
+};
 
-const styles = StyleSheet.create({
-});
+const styles = StyleSheet.create({});
 
 export default ModuleViewScreen;
