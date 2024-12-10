@@ -1,16 +1,19 @@
+import { useState } from 'react';
 import { StyleSheet } from "react-native";
 import Screen from "../layout/Screen";
 import ModuleList from "../entity/modules/ModuleList.js";
 
 import initialModules from "../../data/modules.js";
 
-const ModuleListScreen = () => {
+const ModuleListScreen = ({navigation}) => {
   // Initialisations ----------------------
-  const modules = initialModules;
-
   // State --------------------------------
+  const [modules, setModules ] = useState(initialModules);
+
   // Handlers -----------------------------
-  const handleSelect = (module) => alert(`Item ${module.ModuleCode} selected`);
+  const handleSelect = (module) => navigation.navigate('ModuleViewScreen', { module });
+  const handleDelete = (module) => 
+    setModules(modules.filter((item) => item.ModuleID !== module.ModuleID));
 
   // View ---------------------------------
   return (
@@ -20,9 +23,7 @@ const ModuleListScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {},
-});
+const styles = StyleSheet.create({});
 
 export default ModuleListScreen;
 
